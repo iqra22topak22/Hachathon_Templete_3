@@ -21,13 +21,11 @@
 //   );
 // }
 // ******************************************************************
-import { sanityFetch } from "@/sanity/lib/fetch"
-import { urlFor } from "@/sanity/lib/image"
+import { sanityFetch } from "@/sanity/lib/fetch";
 import { allProducts } from "@/sanity/lib/queries";
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import { addToCart } from "./actions/actions";
-import {Swal} from "sweetalert2"
 
 
 
