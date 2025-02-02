@@ -21,16 +21,17 @@
 //   );
 // }
 // ******************************************************************
+
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { allProducts } from "@/sanity/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
-import { addToCart } from "./actions/actions";
+import AddToCartButton from "@/components/addToCartButton";
 
 
 
-
-type Product = {
+export type Product = {
+  _id : string,
   product :string,
   category :string,
   name : string,
@@ -56,18 +57,9 @@ type category= {
 export default async function Home(){
   const products : Product[] =await sanityFetch({query :allProducts})
 
-  console.log("Products Coming from sanity",products);
+  // console.log("Products Coming from sanity",products);
   // *************************cart************************
-const handleAddToCart =(e:React.MouseEvent,product:Product)=>{
-  e.preventDefault()
-  swal.fire({
-  position: "top-start",
-  icons : "success",
-  title: `${product.name} added to cart`,
-  showConfirmButton: false,
-  timer:1500,})
-  addToCart(product)
-}
+
   return(
     <div>
       <h1>Products</h1>
@@ -99,10 +91,8 @@ const handleAddToCart =(e:React.MouseEvent,product:Product)=>{
         <p className="mt-4 text-lg font-semibold text-gray-900">{product.price}</p>
 
         {/* Optional: Add a button for actions like "Add to Cart" */}
-        <button className="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:scale-110 transition-transform duration-200 ease-in-out  hover:bg-blue-700" onClick={(e) => handleAddToCart(e,product)}>
-          Add to Cart
-        </button>
-        
+       
+        <AddToCartButton product={product} />
       </div>
     </div>
   ))}

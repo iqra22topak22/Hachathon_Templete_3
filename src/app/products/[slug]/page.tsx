@@ -71,6 +71,7 @@ console.log("Product Details ======= >>>>>",product);
   <div className="p-4">
     <h1 className="text-xl font-semibold text-gray-900 truncate">{product.name}</h1>
     <p className="text-lg text-gray-700 mt-2">{product.price}</p>
+    
   </div>
 </div>
 

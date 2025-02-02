@@ -1,13 +1,10 @@
 import { defineQuery } from "next-sanity";
 
 
-
-
-
-
 export const allProducts = defineQuery(`
     
     *[_type == "product"]{
+    _id,
     _product,
     category,
     name,
