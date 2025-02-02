@@ -41,4 +41,4 @@ export default AddToCartButton
 
 
 // 1 mint ok kry
-//  dekhi abhi jaise me kuch likh rha ho is file me jiska name addToCartButton.tsx ha tu ab is kuch change hoa ha to vs code ne detect kar leya ha or ab wo keh rha ha isko push kar do 
+//  dekhi abhi jaise me kuch likh rha ho is file me jiska name addToCartButton.tsx ha tu ab is kuch change hoa ha to vs code ne detect kar leya ha or ab wo keh rha ha isko push kar do abhi mene commit keya ha khali  
