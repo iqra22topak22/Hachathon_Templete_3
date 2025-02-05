@@ -30,23 +30,37 @@ import AddToCartButton from "@/components/addToCartButton";
 
 
 
+// export type Product = {
+//   _id : string,
+//   product :string,
+//   category :string,
+//   name : string,
+//   slug : {
+//     current:string;
+//     _type:string;
+//   },
+//   imageUrl : string,
+//   price :number,
+//   quantity :number,
+//   tags : string,
+//   description :string,
+//   features :string,
+//   dimensions : string,
+// }
 export type Product = {
-  _id : string,
-  product :string,
-  category :string,
-  name : string,
-  slug : {
-    current:string;
-    _type:string;
-  },
-  imageUrl : string,
-  price :number,
-  quantity :number,
-  tags : string,
-  description :string,
-  features :string,
-  dimensions : string,
+  _id: string
+  name: string
+  price: number
+  imageUrl: string
+  quantity: number
+  description: string
+  slug: { current: string; _type: string }
+  dimensions: { depth: string; width: string; height: string }
+  features: string[]
+  tags: string[]
+  category: { _ref: string; _type: string }
 }
+
 
 type category= {
   category : string,
