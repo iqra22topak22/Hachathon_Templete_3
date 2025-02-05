@@ -62,11 +62,11 @@ export type Product = {
 }
 
 
-type category= {
-  category : string,
-  name : string,
-  slug : string,
-}
+// type category= {
+//   category : string,
+//   name : string,
+//   slug : string,
+// }
 
 export default async function Home(){
   const products : Product[] =await sanityFetch({query :allProducts})
